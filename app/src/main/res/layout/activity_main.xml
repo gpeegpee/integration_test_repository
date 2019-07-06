@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/bootCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[BootComplete Test]"
+        />
+
+    <TextView
+        android:id="@+id/boot_complete_service_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="N/A"
+        />
+
+    <TextView
+        android:id="@+id/StartAndbindServiceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[StartAndbindService() Test]"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/start_and_bind_service_start_button"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="Start"
+            />
+
+        <Button
+            android:id="@+id/start_and_bind_service_stop_button"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="false"
+            android:text="Stop"
+            />
+
+        <Button
+            android:id="@+id/start_and_bind_service_unbind_button"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="false"
+            android:text="Unbind"
+            />
+
+        <TextView
+            android:id="@+id/start_and_bind_service_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="N/A" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/AidlStartAndbindServiceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[AidlStartAndbindService() Test]"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/aidl_start_and_bind_service_start_button"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="Start"
+            />
+
+        <Button
+            android:id="@+id/aidl_start_and_bind_service_stop_button"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="false"
+            android:text="Stop"
+            />
+
+        <Button
+            android:id="@+id/aidl_start_and_bind_service_unbind_button"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="false"
+            android:text="Unbind"
+            />
+
+        <TextView
+            android:id="@+id/aidl_start_and_bind_service_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="N/A" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bindServiceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[bindService() Test]"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bind_service_start_button"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="Start"
+            />
+
+        <Button
+            android:id="@+id/bind_service_stop_button"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="false"
+            android:text="Stop"
+            />
+
+        <TextView
+            android:id="@+id/bind_service_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="N/A" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/startServiceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[startService() Test]"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/start_service_start_button"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="Start"
+            />
+
+        <Button
+            android:id="@+id/start_service_stop_button"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="false"
+            android:text="Stop"
+            />
+
+        <TextView
+            android:id="@+id/start_service_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="N/A" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/startForegroundTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[startForeground() Test]"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/start_foreground_start_button"
+        style="@style/Base.TextAppearance.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:enabled="true"
+        android:text="Start"
+        />
+
+    <Button
+        android:id="@+id/start_foreground_stop_button"
+        style="@style/Base.TextAppearance.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:enabled="false"
+        android:text="Stop"
+        />
+
+        <TextView
+            android:id="@+id/start_foreground_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="N/A" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/startForegroundTextViewWithoutChannel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[startForegroundWithoutChannel() Test]"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/start_foreground_without_channel_start_button"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="Start"
+            />
+
+        <Button
+            android:id="@+id/start_foreground_without_channel_stop_button"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="false"
+            android:text="Stop"
+            />
+
+        <TextView
+            android:id="@+id/start_foreground_without_channel_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="N/A" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[Setting to Battery Optimization Test]"
+    />
+
+    <Button
+        android:id="@+id/setting_button"
+        style="@style/Base.TextAppearance.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:clickable="true"
+        android:text="Go to Setting"
+        />
+
+</LinearLayout>

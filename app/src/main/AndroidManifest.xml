@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gpeegpee.oreobackgroundservicetestapplication">
+
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- Allows for storing and retrieving screenshots -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <application
+        android:name=".OreoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.BindService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".service.StartAndBindService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".service.AidlStartAndBindService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":AidlStartAndBindService" />
+
+        <service
+            android:name=".service.StartService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":Start" />
+        <service
+            android:name=".service.StartForegroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":Foreground" />
+
+        <service
+            android:name=".service.StartForegroundWithoutChannelService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":ForegroundWithoutChannel" />
+
+        <service
+            android:name=".service.SampleJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":JobService" />
+
+        <service
+            android:name=".service.SampleJobIntentService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":JobIntentService" />
+
+        <receiver
+            android:name=".receiver.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".receiver.LocalBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":LocalBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.example.gpeegpee.action.localbr" />
+            </intent-filter>
+        </receiver>
+
+        <!--<receiver-->
+            <!--android:name=".receiver.AppUpgradeReceiver"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="true"-->
+            <!--android:process=":AppUpgradeBroadcastReceiver">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MY_PACKAGE_REPLACED" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <receiver
+            android:name=".receiver.LongDelayTestReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BLUETOOTH"
+            android:process=":LongDelayTestReceiver">
+            <intent-filter>
+                <action android:name="android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED" />
+                <action android:name="android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED" />
+                <action android:name="android.bluetooth.input.profile.action.CONNECTION_STATE_CHANGED" />
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver
+            android:name=".receiver.BluetoothTestReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BLUETOOTH"
+            android:process=":BluetoothTestReceiver">
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.CONNECTION_HID_HOST" />
+                <action android:name="android.bluetooth.device.action.BOND_STATE_CHANGED" />
+                <action android:name="android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED" />
+                <action android:name="android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED" />
+                <action android:name="android.bluetooth.input.profile.action.CONNECTION_STATE_CHANGED" />
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
