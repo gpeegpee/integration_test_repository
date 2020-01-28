@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('build') {
       steps {
-        withGradle()
+        sh 'gradlew assembleDebug'
       }
     }
 
