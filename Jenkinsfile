@@ -4,7 +4,7 @@ pipeline {
     stage('build') {
       steps {
         withGradle() {
-          sh 'gradlew assembleDebug'
+          sh './gradlew assembleDebug'
         }
 
       }
